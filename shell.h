@@ -31,7 +31,7 @@
 #define USE_GETLINE 0
 #define USE_STRTOK 0
 
-#define HIS_FILE ".simple_shell_history"
+#define HIST_FILE ".simple_shell_history"
 #define HIST_MAX 4096
 
 extern char **environ;
@@ -95,9 +95,10 @@ typedef struct passinfo
 	int histcount;
 } info_t;
 
-#define INFO_INIT
-{NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL,
+#define INFO_INIT \
+{NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
 	0, 0, 0}
+	
 /**
  * struct builtin - contains a builtin string and related function
  * @type: the builtin command flag
